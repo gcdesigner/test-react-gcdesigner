@@ -15,8 +15,8 @@ export const CartFooter = () => {
     setLoading(true);
     return new Promise((result) => setTimeout(result, 2000))
       .then(() => {
-        resetCart();
         navigation.push("pagamento-confirmado");
+        resetCart();
       })
       .finally(() => setLoading(false));
   };
