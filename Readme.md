@@ -53,3 +53,7 @@ Para o desafio, simularemos uma API, onde o candidato terá que realizar um **GE
 
 Como você pode perceber, são dois desafios, sendo o primeiro de Análise e o segundo para a estruturação de um projeto React.
 Solicito a gentileza, exclusivamente para o teste React deixe o seu código na pasta `wemovie-ecommerce` e que hospede a aplicação em uma URL pública, por exemplo na Vercel ou Netlify, envie os links em até 24 horas a contar do envio teste caso você precise de mais tempo, por favor, nos informe. Nesse momento é muito importante para nós que você consiga entregar o desafio completo :)
+
+## URL Pública da aplicação
+
+- https://test-react-gcdesigner.vercel.app/
