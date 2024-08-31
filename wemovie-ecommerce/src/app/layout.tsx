@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "grid grid-rows-[88px_1fr] bg-[#2F2E41] pb-10",
+          "grid grid-rows-[88px_1fr] bg-bodyBackground pb-10",
           fontSans.className,
         )}
       >

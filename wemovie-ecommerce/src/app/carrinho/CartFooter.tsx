@@ -1,24 +1,18 @@
 import { Button } from "@/components/ui/button";
+import { postPayment } from "@/http/post-payment";
 import { formatPrice } from "@/lib/utils";
 import { useCartStore } from "@/stores/cart.store";
 import { LoaderCircle } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export const CartFooter = () => {
-  const resetCart = useCartStore((s) => s.resetCart);
   const cartTotal = useCartStore((s) => s.cartTotal);
-  const navigation = useRouter();
   const [loading, setLoading] = useState(false);
 
   const onPayment = async () => {
     setLoading(true);
-    return new Promise((result) => setTimeout(result, 2000))
-      .then(() => {
-        navigation.push("pagamento-confirmado");
-        resetCart();
-      })
-      .finally(() => setLoading(false));
+    await postPayment();
+    setLoading(false);
   };
 
   return (

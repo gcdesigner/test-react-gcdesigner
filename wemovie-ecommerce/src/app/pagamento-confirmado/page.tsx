@@ -1,9 +1,17 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { useCartStore } from "@/stores/cart.store";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function ConfirmedPaymentPage() {
+  const resetCart = useCartStore((s) => s.resetCart);
+
+  useEffect(() => resetCart(), [resetCart]);
+
   return (
     <Container>
       <div className="flex w-full flex-col items-center justify-center gap-6 rounded bg-white p-16 text-center">

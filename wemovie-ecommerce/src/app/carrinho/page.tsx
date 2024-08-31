@@ -12,7 +12,7 @@ export default function CartPage() {
   const products = useCartStore((s) => s.products);
   const productsLength = useCartStore((s) => s.productsLength);
 
-  if (productsLength <= 0) {
+  if (!productsLength) {
     return (
       <Container>
         <EmptyState>
